@@ -1,0 +1,27 @@
+---
+import { fade, slide } from "astro:transitions"
+
+const menuItems = [
+    { name: 'Perfil', href: '/profile' },
+    { name: 'Estudios', href: '/studies' },
+    { name: 'Tecnologías', href: '/technologies' },
+    { name: 'Experiencia', href: '/experience' },
+]
+
+const currentPath = Astro.url.pathname
+
+---
+
+<nav> 
+    <div class="flex gap-4 w-full justify-center shadow-inner bg-[#7c809b]" >
+        {
+            menuItems.map(item => (<a href={item.href} 
+                                      class={ 'py-4 px-2 ' + (currentPath == item.href ? 'border-b' : '')}
+                                      transition:name={item.name}>{item.name}</a>))
+        }
+        <!-- <a href=""  class="py-4 px-2 hover:bg-[#a9afd1]">Perfil</a>
+        <a href=""  class="py-4 px-2 hover:bg-white">Estudios</a>
+        <a href="" class="py-4 px-2 hover:bg-white">Tecnologías</a>
+        <a href="" class="py-4 px-2 hover:bg-white">Experiencia</a> -->
+    </div>
+</nav>
