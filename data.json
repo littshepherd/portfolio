@@ -1,0 +1,20 @@
+{
+    "studies": [
+        {
+            "institution": "SENA",
+            "title": "Tecnico en Desarrollo de Software",
+            "dateRange": [
+                "2018-02-01",
+                "2019-10-30"
+            ]
+        },
+        {
+            "institution": "Institución Universitaria Pascual Bravo",
+            "title": "Tecnologo en Desarrollo de Software",
+            "dateRange": [
+                "2020-02-01",
+                "2024-10-30"
+            ]
+        }
+    ] 
+}

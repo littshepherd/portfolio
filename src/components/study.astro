@@ -1,0 +1,23 @@
+---
+interface Props {
+    title: string,
+    institution: string,
+    dateRange: Date[]
+}
+function dateFormat(date: Date): string 
+{
+    return`${date.getFullYear()}-${date.getMonth()}-${date.getDay()}`
+}
+
+const { title, institution, dateRange } = Astro.props
+---
+<div class=" p-4 flex flex-col border-2 shadow-lg shadow-white/10  gap-2 items-start bg-black/30 text-white">
+    <h2>{title}</h2>
+    <div class="flex gap-8 w-full justify-between">
+    <h3>{institution}</h3>
+        <div class="flex">
+            <h3>{dateFormat(dateRange[0])} {dateFormat(dateRange[1])}</h3>
+        </div>
+    </div>
+
+</div>

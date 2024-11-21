@@ -1,6 +1,27 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import {studies} from "../../data.json"
+import Study from "../components/study.astro";
+import type { string } from "astro:schema";
+
+function castDateRange(dateRange: string[]): Date[] {
+    const newDateRange = dateRange.map( (e: string) => new Date(e))
+
+    return newDateRange
+}
 
 ---
 <BaseLayout>
+    <div class="w-full mt-20 flex justify-center">
+        <div class="flex flex-col gap-4 w-[33rem]">
+        {studies.map( item => (
+            <Study
+        title={item.title}
+        institution={item.institution}
+        dateRange={castDateRange(item.dateRange)}
+        />
+        ) )}
+        </div>
+    </div>
+
 </BaseLayout>
