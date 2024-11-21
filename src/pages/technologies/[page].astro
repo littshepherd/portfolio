@@ -1,0 +1,23 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import {technologies} from "../../../data.json" 
+import TechnologiesCollection from "../../components/technologies/technologiesCollection.astro";
+
+export async function getStaticPaths({paginate}){
+    const technologiesPaths = [...technologies]
+    return paginate(technologiesPaths, {pageSize: 3 })
+}
+
+const { page } = Astro.props
+---
+{console.log(page)}
+<BaseLayout> 
+    <div class="w-full flex justify-center ">
+        <TechnologiesCollection technologies={page}/>
+
+    </div>
+    <div>
+        { page.url.prev && <a href={page.url.prev} class="text-white"> anterior </a>}
+        { page.url.next && <a href={page.url.next} class="text-white"> siguiente </a>
+    </div>}
+</BaseLayout>

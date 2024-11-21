@@ -37,5 +37,38 @@
             ],
             "technologies": ["PHP", "Laravel", "PostgreSQL"]
         }
-    ] 
+    ] ,
+    "technologies": [
+        {
+            "name": "Node.js",
+            "imageURL": "https://nodejs.org/static/logos/jsIconGreen.svg" ,
+            "description": "He usado Node.js para crear scripts en el backend y para crear APIs junto con librerias como Express.js"
+        },
+        {
+            "name": "Javascript",
+            "imageURL": "data:image/png;base64,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" ,
+            "description": "He usado Node.js para crear scripts en el backend y para crear APIs junto con librerias como Express.js"
+        },
+        {
+            "name": "MongoDB",
+            "imageURL": "public/mongodb.png" ,
+            "description": "He usado Node.js para crear scripts en el backend y para crear APIs junto con librerias como Express.js"
+        },
+        {
+            "name": "Node.js",
+            "imageURL": "https://nodejs.org/static/logos/jsIconGreen.svg" ,
+            "description": "He usado Node.js para crear scripts en el backend y para crear APIs junto con librerias como Express.js"
+        },
+        {
+            "name": "Javascript",
+            "imageURL": "data:image/png;base64,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" ,
+            "description": "He usado Node.js para crear scripts en el backend y para crear APIs junto con librerias como Express.js"
+        },
+        {
+            "name": "MongoDB",
+            "imageURL": "public/mongodb.png" ,
+            "description": "He usado Node.js para crear scripts en el backend y para crear APIs junto con librerias como Express.js"
+        }
+
+    ]
 }

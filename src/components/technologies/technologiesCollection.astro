@@ -1,0 +1,12 @@
+---
+import type { GetStaticPaths } from "astro";
+import Technology from "./technology.astro"
+
+const { technologies} = Astro.props
+
+console.log(technologies)
+---
+
+<div class="divide-y divide-dashed">
+    {technologies.data.map((item) => (<Technology name={item.name} imageURL={item.imageURL} description={item.description} />))}
+</div>
