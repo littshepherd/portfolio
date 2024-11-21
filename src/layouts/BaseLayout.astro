@@ -12,8 +12,14 @@ import Navbar from "../components/navbar.astro";
 		<title>Astro</title>
 		<ViewTransitions />
 	</head>
-	<body class="bg-[#a9afd1]">
-        <Navbar  />
-        <slot />
+	<body class="bg-black ">
+	<div  class="grid grid-cols-[1fr_5fr] ">
+	<div class=" h-screen sticky top-0">
+		<Navbar />
+	</div>
+		<div class="h-[100%] overflow-hidden">
+			<slot />
+		</div>
+	</div>
 	</body>
 </html>
