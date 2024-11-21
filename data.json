@@ -6,7 +6,8 @@
             "dateRange": [
                 "2018-02-01",
                 "2019-10-30"
-            ]
+            ],
+            "technologies": ["Java", "PHP", "HTML", "CSS", "MySQL"]
         },
         {
             "institution": "Institución Universitaria Pascual Bravo",
@@ -14,55 +15,27 @@
             "dateRange": [
                 "2020-02-01",
                 "2024-10-30"
-            ]
+            ],
+            "technologies": ["C#", "C++", "JS", "Java", "SQL Server", "MongoDB"]
         },
         {
-            "institution": "SENA",
-            "title": "Tecnico en Desarrollo de Software",
+            "institution": "Platzi",
+            "title": "Curso de Creación de APIs con Ruby on Rails",
             "dateRange": [
-                "2018-02-01",
-                "2019-10-30"
-            ]
+        
+                "2023-02-01"
+            ],
+            "technologies": ["Ruby", "Ruby on Rails", "PostgreSQL", "Java", "SQL Server", "MongoDB"]
+
         },
         {
-            "institution": "Institución Universitaria Pascual Bravo",
-            "title": "Tecnologo en Desarrollo de Software",
-            "dateRange": [
-                "2020-02-01",
-                "2024-10-30"
-            ]
-        },
-        {
-            "institution": "SENA",
-            "title": "Tecnico en Desarrollo de Software",
-            "dateRange": [
-                "2018-02-01",
-                "2019-10-30"
-            ]
-        },
-        {
-            "institution": "Institución Universitaria Pascual Bravo",
-            "title": "Tecnologo en Desarrollo de Software",
+            "institution": "Platzi",
+            "title": "Curso de Introducción a Laravel 6",
             "dateRange": [
                 "2020-02-01",
                 "2024-10-30"
-            ]
-        },
-        {
-            "institution": "SENA",
-            "title": "Tecnico en Desarrollo de Software",
-            "dateRange": [
-                "2018-02-01",
-                "2019-10-30"
-            ]
-        },
-        {
-            "institution": "Institución Universitaria Pascual Bravo",
-            "title": "Tecnologo en Desarrollo de Software",
-            "dateRange": [
-                "2020-02-01",
-                "2024-10-30"
-            ]
+            ],
+            "technologies": ["PHP", "Laravel", "PostgreSQL"]
         }
     ] 
 }

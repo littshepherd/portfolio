@@ -1,23 +1,32 @@
 ---
+import TagCollection from './tags/tagCollection.astro'
+
 interface Props {
     title: string,
     institution: string,
-    dateRange: Date[]
+    dateRange: Date[],
+    tags? : string[]
 }
 function dateFormat(date: Date): string 
 {
     return`${date.getFullYear()}-${date.getMonth()}-${date.getDay()}`
 }
 
-const { title, institution, dateRange } = Astro.props
+const { title, institution, dateRange, tags } = Astro.props
 ---
-<div class=" p-4 flex flex-col border-2 shadow-lg shadow-white/10  gap-2 items-start bg-black/30 text-white">
-    <h2>{title}</h2>
-    <div class="flex gap-8 w-full justify-between">
-    <h3>{institution}</h3>
-        <div class="flex">
-            <h3>{dateFormat(dateRange[0])} {dateFormat(dateRange[1])}</h3>
-        </div>
+<div class=" p-4 flex flex-col border rounded-md border-[#355070] shadow-lg shadow-[#355070]/20  gap-2 items-start bg-[#355070]/20 text-white transition transition-duration-200 ease-in  hover:scale-110">
+    <h2 class="text-lg font-bold">{title}</h2>
+    <div class="flex gap-2 w-full ">
+        <span class="font-bold">Universidad: </span>
+        <h3>{institution}</h3>
     </div>
+    <div class="flex gap-2 ">
+        <span class="font-bold">fecha:</span>
+        <h3>{dateFormat(dateRange[0])} { dateRange[1] && dateFormat(dateRange[1])}</h3>
+    </div>
+    <a href="#" class="underline text-blue-600	"> Ver Certificado</a>
+   { tags && <div>
+        <TagCollection tags={tags} />
+    </div>}
 
 </div>

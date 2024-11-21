@@ -12,13 +12,14 @@ function castDateRange(dateRange: string[]): Date[] {
 
 ---
 <BaseLayout>
-    <div class="w-full  flex justify-center ">
-        <div class="flex flex-col gap-4 w-[33rem]">
+    <div class="w-full  flex justify-center py-20">
+        <div class=" flex flex-col gap-8 w-[33rem]">
         {studies.map( item => (
             <Study
         title={item.title}
         institution={item.institution}
         dateRange={castDateRange(item.dateRange)}
+        tags={item.technologies}
         />
         ) )}
         </div>

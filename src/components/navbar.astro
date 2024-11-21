@@ -16,7 +16,7 @@ const currentPath = Astro.url.pathname
   
         {
             menuItems.map(item => (<a href={item.href} 
-                                      class={ 'px-4 px-2 ' + (currentPath == item.href ? 'border-b' : '')}
+                                      class={ 'px-10 pl-8 ' + (currentPath == item.href ? 'border-b' : '')}
                                       transition:name={item.name}>{item.name}</a>))
         }
 

@@ -1,0 +1,9 @@
+---
+import Tag from "./tag.astro"
+
+const {tags} = Astro.props
+---
+
+<div class="flex gap-2 ">
+    {tags.map((e: string) => (<Tag value={e}/>))}
+</div>
