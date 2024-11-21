@@ -15,7 +15,7 @@ import Navbar from "../components/navbar.astro";
 	<body class="bg-black ">
 	<div  class="grid grid-cols-[1fr_5fr] ">
 	<div class=" h-screen sticky top-0">
-		<Navbar client:only />
+		<Navbar client:load />
 	</div>
 		<div class="h-[100%] overflow-hidden">
 			<slot />
