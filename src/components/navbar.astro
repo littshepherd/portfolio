@@ -4,19 +4,19 @@ import { fade, slide } from "astro:transitions"
 const menuItems = [
     { name: 'Perfil', href: '/profile' },
     { name: 'Estudios', href: '/studies' },
-    { name: 'Tecnologías', href: '/technologies' },
+    { name: 'Tecnologías', href: '/technologies/1' },
     { name: 'Experiencia', href: '/experience' },
 ]
 
-const currentPath = Astro.url.pathname
+const currentPath = Astro.url.pathname.split('/')[1]
 
 ---
 
-<nav class="h-full flex flex-col justify-center text-white "> 
+<nav class="h-full flex flex-col justify-center text-white gap-4 "> 
   
         {
             menuItems.map(item => (<a href={item.href} 
-                                      class={ 'px-10 pl-8 ' + (currentPath == item.href ? 'border-b' : '')}
+                                      class={ 'px-10 pl-8 text-xl ' + (currentPath == item.href.split('/')[1] ? 'border-b' : '')}
                                       transition:name={item.name}>{item.name}</a>))
         }
 
